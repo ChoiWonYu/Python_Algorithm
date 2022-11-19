@@ -1,4 +1,5 @@
-import LinkedListBasic as L
+from DataStructure import LinkedListBasic as L
+
 
 class LinkedStack:
     def __init__(self):
