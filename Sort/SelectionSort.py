@@ -8,13 +8,5 @@ def SelectionSort(A):
                 minIdx=j
         A[i],A[minIdx]=A[minIdx],A[i]
     return A
-
-A=[1,2,7,3,5,9,3]
-
-
-a=[]
-for i in range(20000):
-    a.append(randrange(100000))
-start=time.time()
-SelectionSort(A)
-end=time.time()
+A=[12, 70 ,30, 20 ,55 ,25]
+print(SelectionSort(A))

@@ -1,3 +1,9 @@
+import time
+from random import randrange
+a=[]
+time_sum=0
+for i in range(100000):
+    a.append(randrange())
 def mergesort(arr):
     def sort(low,high):
         if high-low<2:
@@ -26,6 +32,5 @@ def mergesort(arr):
         for i in range(low,high):
             arr[i]=tmp[i-low]
     return sort(0,len(arr))
-
-arr=[6, 5, 3, 1, 8, 7, 2, 4]
+arr=[12, 70, 30, 20, 55 ,25, 40, 50]
 print(mergesort(arr))
