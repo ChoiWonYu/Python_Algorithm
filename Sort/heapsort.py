@@ -3,7 +3,7 @@ from random import randrange
 a=[]
 time_sum=0
 for i in range(100000):
-    a.append(randrange())
+    a.append(randrange(100000))
 def heapsort(A):
     def percolateDown(A,k:int,end:int):
         child=2*k+1
@@ -21,6 +21,8 @@ def heapsort(A):
     for last in range(len(A)-1,0,-1):
         A[last],A[0]=A[0],A[last]
         percolateDown(A,0,last-1)
-A=[12, 70 ,30, 20 ,55 ,25]
-heapsort(A)
-print(A)
+start=time.time()
+heapsort(a)
+end=time.time()
+sortTime=end-start
+print(f'{sortTime:.10f}')

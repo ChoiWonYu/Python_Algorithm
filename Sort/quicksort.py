@@ -1,9 +1,8 @@
 import time
 from random import randrange
 a=[]
-time_sum=0
 for i in range(100000):
-    a.append(randrange())
+    a.append(randrange(100000))
 def quicksort(A,start,end):
     def partition(A,start,end):
         x=A[end]
@@ -31,7 +30,9 @@ def partition(A, start, end):
             A[i], A[j] = A[j], A[i]
     A[i + 1], A[end] = A[end], A[i + 1]
     return i + 1
-A=[12, 70 ,30, 20 ,55 ,25]
 
-quicksort(A,0,len(A)-1)
-print(A)
+start=time.time()
+quicksort(a,0,len(a)-1)
+end=time.time()
+sortTime=end-start
+print(f'{sortTime:.10f}')

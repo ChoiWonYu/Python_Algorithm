@@ -2,11 +2,11 @@ from insertionsort import insertionsort
 
 import math
 import time
-from random import randrange
+from random import random
 a=[]
 time_sum=0
-for i in range(100000):
-    a.append(randrange())
+for i in range(1000):
+    a.append(random())
 
 
 
@@ -22,10 +22,8 @@ def bucketsort(arr):
         arr.extend(B[i])
 
 
-for i in range(100):
-    start=time.time()
-    bucketsort(a)
-    end=time.time()
-    time_sum+=end-start
-aver=time_sum/100
-print(f'{aver:.10f}')
+start=time.time()
+bucketsort(a)
+end=time.time()
+Time=end-start
+print(f'{Time:.10f}')

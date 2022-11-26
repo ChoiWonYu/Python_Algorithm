@@ -2,8 +2,9 @@ import time
 from random import randrange
 a=[]
 time_sum=0
-for i in range(100000):
-    a.append(randrange())
+for i in range(10000):
+    a.append(randrange(100000))
+
 def insertionsort(A:[]):
     for i in range(1,len(A)):
         for j in range(i,0,-1):
@@ -13,3 +14,8 @@ def insertionsort(A:[]):
                 break
     return A
 
+start=time.time()
+insertionsort(a)
+end=time.time()
+sortTime=end-start
+print(f'{sortTime:.10f}')
