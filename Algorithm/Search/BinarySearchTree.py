@@ -7,6 +7,18 @@ class TreeNode:
 class BinarySearchTree:
     def __init__(self):
         self.__root=None
+
+    def __searchItem(self,tNode,x):
+        if tNode==None:
+            return None
+        elif x==tNode.item:
+            return tNode
+        elif x<tNode.item:
+            return self.__searchItem(tNode.left,x)
+        else:
+            return self.__searchItem(tNode.right,x)
+    def search(self, x):
+        return self.__searchItem(self.__root, x)
     def insert(self,newItem):
         self.__root=self.__insertItem(self.__root,newItem)
     def returnRoot(self):
