@@ -8,4 +8,3 @@ for i in range(1,n+1):
         if a[1]*2==a[0]+a[2]:
             c+=1
 print(c)
-
