@@ -81,10 +81,10 @@ print(bisect_right(a,x))    #4
 data=deque([1,2,3])
 data.appendleft(9)
 data.append(5)
-
 print(data)             #deque([9, 1, 2, 3, 5])
 print(list(data))       #[9, 1, 2, 3, 5]
-
+data.rotate(2)
+print(data)
 
 #Counter
 
