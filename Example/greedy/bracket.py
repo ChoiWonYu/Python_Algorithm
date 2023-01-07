@@ -1,6 +1,11 @@
 import sys
 input=sys.stdin.readline
-l=input().strip().split('+')
-if len(l)!=1:
-    for i in range(1,(len(l)-1)*2):print(i)
-
+str=input().strip()
+arr=str.split('-')
+for i in range(len(arr)):
+    arr[i]=list(map(int,arr[i].split('+')))
+    arr[i]=sum(arr[i])
+result=arr[0]
+for i in range(1,len(arr)):
+    result-=arr[i]
+print(result)
