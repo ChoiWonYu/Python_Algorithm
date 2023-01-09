@@ -1,15 +1,10 @@
 import sys
 input=sys.stdin.readline
 
-N=int(input())
-C=list(map(int,input().split()))
-SC=set(C)
-M=int(input())
-Q=list(map(int,input().split()))
-SQ=set(Q)
-result=SC.intersection(SQ)
-for i in Q:
-    if i in result:
-        print(1,end=' ')
-    else:print(0,end=' ')
+input()
+C=set(map(int,input().split()))
+input()
+for i in map(int,input().split()):
+    if i in C:print(1,end=' ')
+    else:print(0, end=' ')
 
