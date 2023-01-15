@@ -9,7 +9,5 @@ input()
 arr=list(map(int,input().split()))
 for i in range(1,len(arr)):
     g=gcd(arr[i],arr[0])
-    print(arr[0]//g,end='')
-    print('/',end='')
-    print(arr[i]//g)
+    print("{0}/{1}".format(arr[0]//g,arr[i]//g))
 
