@@ -1,6 +1,6 @@
 import sys
 from itertools import permutations
-
+#dfs 배우고 다시
 input=sys.stdin.readline
 N=int(input())
 num=list(map(int,input().split()))
