@@ -31,5 +31,6 @@ for i in range(N):
     else:
         if not flag:
             d.reverse()
-        print("[" + ",".join(d) + "]")
+        print("[" + ",".join(d) + "]"
+              )
         #리스트 바로 출력해서 계속 틀렸음;
