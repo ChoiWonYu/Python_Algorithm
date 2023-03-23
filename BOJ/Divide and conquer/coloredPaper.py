@@ -5,25 +5,21 @@ N=int(input())
 arr=[]
 result=[0,0]
 def quad(data,startX,startY,size):
-    startNum=data[startY][startX]
-    flag=True
+    flag=data[startY][startX]
+    if size==1:
+        result[flag]+=1
+        return
+
     for i in range(size):
         for j in range(size):
-            if data[startY+i][startX+j]==startNum:
-                continue
-            else:
-                flag=False
-                break
-        if not flag:break;
-    if flag:result[startNum]+=1
-    else:
-        size//=2
-        quad(data,startX,startY,size)
-        quad(data,startX+size,startY,size)
-        quad(data,startX,startY+size,size)
-        quad(data,startX+size,startY+size,size)
-
-
+            if data[startY+i][startX+j]!=flag:
+                size //= 2
+                quad(data, startX, startY, size)
+                quad(data, startX + size, startY, size)
+                quad(data, startX, startY + size, size)
+                quad(data, startX + size, startY + size, size)
+                return
+    result[flag]+=1
 
 for i in range(N):
     arr.append(list(map(int,input().split())))
